@@ -1,0 +1,51 @@
+# Story Definition of Done (DoD) Checklist
+
+## Instructions for Developer Agent:
+Before marking a story as 'Review', please go through each item in this checklist. Report the status of each item (e.g., [x] Erledigt, [ ] Offen, [N/A] Nicht zutreffend) und liefere kurze Kommentare, falls nötig. Füge diesen ausgefüllten Abschnitt am Ende der Story-Datei ein oder verlinke ihn.
+
+## Checklist Items:
+
+1.  **Anforderungen erfüllt:**
+    - [ ] Alle funktionalen Anforderungen, wie in der Story spezifiziert, sind implementiert.
+    - [ ] Alle Akzeptanzkriterien (Acceptance Criteria), wie in der Story definiert, sind erfüllt und verifiziert.
+
+2.  **Coding Standards & Projektstruktur:**
+    - [ ] Jeglicher neuer/geänderter Code hält sich strikt an `docs/coding-standards.md` (gemäß Agenten-Prüfung).
+    - [ ] Jeglicher neuer/geänderter Code passt zur `docs/project-structure.md` (Dateipfade, Benennung etc.).
+    - [ ] Die Implementierung aligniert mit relevanten Abschnitten der `docs/architecture.md` (falls die Story Auswirkungen auf die Architektur hat).
+    - [ ] Die Einhaltung von `docs/tech-stack.md` bezüglich der verwendeten Technologien/Versionen ist gewährleistet (falls die Story neue Technologien einführt oder bestehende signifikant ändert).
+    - [ ] Die Einhaltung von `docs/api-reference.md` und `docs/data-models.md` ist gewährleistet (falls die Story API- oder Datenmodelländerungen beinhaltet).
+    - [ ] Offensichtliche Sicherheitsrisiken wurden vermieden und grundlegende Security Best Practices für den neuen/geänderten Code angewendet.
+    - [ ] Keine neuen Linter-Fehler oder Warnungen wurden im geänderten Code eingeführt (gemäß Agenten-Prüfung).
+    - [ ] Code ist ausreichend kommentiert, wo nötig (zur Klärung komplexer Logik).
+
+3.  **Testen:**
+    - [ ] Alle notwendigen Unit-Tests gemäß Story und `docs/testing-strategy.md` sind implementiert.
+    - [ ] Alle notwendigen Integrationstests (falls zutreffend) gemäß Story und `docs/testing-strategy.md` sind implementiert.
+    - [ ] Alle implementierten Tests (Unit, Integration) laufen erfolgreich durch (gemäß Agenten-Testausführung/Simulierung).
+    - [ ] Tests decken die Kernfunktionalität der Story ab (Testabdeckung gemäß `docs/testing-strategy.md`, falls dort Metriken definiert sind ODER nach Agenten-Einschätzung der Testabdeckung).
+
+4.  **Funktionalität & Verifizierung:**
+    - [ ] Funktionalität ist bereit für manuelles Testen (manuelles Testen, falls explizit in Story/Teststrategie gefordert, ggf. durch Benutzer verifiziert und bestätigt).
+    - [ ] Edge Cases (Grenzfälle) und potenzielle Fehlerbedingungen wurden betrachtet und behandelt (gemäß Agenten-Einschätzung während der Implementierung).
+
+5.  **Story Administration:**
+    - [ ] Alle Aufgaben innerhalb der Story-Datei sind als abgeschlossen markiert.
+    - [ ] Jegliche Klärungen oder wichtige Entscheidungen während der Entwicklung sind in der Story-Datei dokumentiert oder angemessen verlinkt.
+    - [ ] Der Story-Abschluss-Bereich (Wrap-up) wurde mit Notizen zu Änderungen, Informationen für die nächste Story, dem primär verwendeten Agenten-Modell und relevanten Changelog-Einträgen ausgefüllt/aktualisiert.
+    - [ ] Der Status der Story in der Datei wurde auf 'Review' gesetzt (dieser Punkt wird als Letztes markiert, NACHDEM ALLE ANDEREN [x] sind und der Benutzer informiert wurde).
+
+6.  **Abhängigkeiten, Build & Konfiguration:**
+    - [ ] Der Code kompiliert/interpretiert ohne offensichtliche Fehler (gemäß Agenten-Prüfung).
+    - [ ] Projekt-Linting durchläuft ohne neue Fehler/Warnungen im geänderten Code (gemäß Agenten-Prüfung).
+    - [ ] Neu hinzugefügte Abhängigkeiten wurden entweder in den Story-Anforderungen VORAB genehmigt ODER explizit vom Benutzer während der Entwicklung genehmigt (Genehmigung in der Story-Datei dokumentiert).
+    - [ ] Falls neue Abhängigkeiten hinzugefügt wurden, sind sie in den relevanten Projektdateien (z.B. `package.json`, `requirements.txt`) samt Begründung vermerkt.
+    - [ ] Keine offensichtlichen Sicherheitslücken durch neu hinzugefügte UND genehmigte Abhängigkeiten festgestellt (gemäß Agenten-Prüfung und Protokoll).
+    - [ ] Falls neue Umgebungsvariablen oder Konfigurationen durch die Story eingeführt wurden, sind diese dokumentiert (z.B. in `docs/environment-vars.md` oder Story-Notizen) und werden sicher gehandhabt.
+
+7.  **Dokumentation (Falls zutreffend):**
+    - [ ] Relevante Inline-Code-Dokumentation (z.B. Docstrings) für neue öffentliche APIs oder komplexe Logik ist vorhanden.
+    - [ ] Relevante Benutzer-/Technische Dokumentation (falls zutreffend laut Story) wurde aktualisiert/angepasst.
+
+## Endgültige Bestätigung durch Agent:
+- [ ] Ich, der Developer Agent, bestätige, dass alle zutreffenden Punkte oben bearbeitet und (soweit für mich verifizierbar) erfüllt wurden.
