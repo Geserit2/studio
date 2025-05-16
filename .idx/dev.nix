@@ -7,6 +7,7 @@
   packages = [
     pkgs.nodejs_20
     pkgs.zulu
+    pkgs.pnpm
   ];
   # Sets environment variables in the workspace
   env = {};
@@ -34,7 +35,7 @@
       enable = true;
       previews = {
         web = {
-          command = ["npm" "run" "dev" "--" "--port" "$PORT" "--hostname" "0.0.0.0"];
+          command = [ "sh", "-c", "cd packages/landing-page && exec pnpm run dev -- --port $PORT --hostname 0.0.0.0" ];
           manager = "web";
         };
       };
